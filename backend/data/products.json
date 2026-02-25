@@ -1,5 +1,15 @@
 [
   {
+    "id": "0",
+    "name": "Ordinateur Portable Ultra",
+    "description": "Ordinateur portable puissant pour les professionnels",
+    "price": 1299.99,
+    "stock": 15,
+    "category": "Informatique",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&h=300&fit=crop"
+  },
+  
+  {
     "id": "1",
     "name": "Smartphone Galaxy Pro",
     "description": "Smartphone haut de gamme avec écran AMOLED",

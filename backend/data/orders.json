@@ -1,0 +1,28 @@
+[
+  {
+    "id": "1771722781427",
+    "items": [
+      {
+        "productId": "1",
+        "name": "Smartphone Galaxy Pro",
+        "quantity": 3,
+        "price": 599.99,
+        "subtotal": 1799.97
+      },
+      {
+        "productId": "2",
+        "name": "Casque Sans Fil",
+        "quantity": 1,
+        "price": 149.99,
+        "subtotal": 149.99
+      }
+    ],
+    "total": 1949.96,
+    "clientId": "1771722738323",
+    "clientName": "jouda",
+    "address": "alger,algérie",
+    "email": "joudamelissa2@gmail.comm",
+    "status": "En attente",
+    "createdAt": "2026-02-22T01:13:01.427Z"
+  }
+]

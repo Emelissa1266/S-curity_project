@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "name": "Smartphone Galaxy Pro",
+    "description": "Smartphone haut de gamme avec écran AMOLED",
+    "price": 599.99,
+    "stock": 22,
+    "category": "Électronique",
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop"
+  },
+  {
+    "id": "2",
+    "name": "Casque Sans Fil",
+    "description": "Casque Bluetooth avec réduction de bruit",
+    "price": 149.99,
+    "stock": 49,
+    "category": "Électronique",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop"
+  },
+  {
+    "id": "3",
+    "name": "Montre Connectée",
+    "description": "Suivi santé et sport en temps réel",
+    "price": 199.99,
+    "stock": 30,
+    "category": "Accessoires",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop"
+  },
+  {
+    "id": "4",
+    "name": "Sac à Dos Premium",
+    "description": "Sac robuste pour ordinateur portable",
+    "price": 79.99,
+    "stock": 45,
+    "category": "Mode",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=300&fit=crop"
+  }
+]

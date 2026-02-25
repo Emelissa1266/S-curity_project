@@ -1,0 +1,54 @@
+.checkout-page,
+.checkout-success {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.checkout-page h1,
+.checkout-success h2 {
+  font-family: var(--font-display);
+  margin-bottom: 2rem;
+}
+
+.checkout-form .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.checkout-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+.checkout-form input:focus,
+.checkout-form textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.checkout-total {
+  margin: 1.5rem 0;
+  font-size: 1.25rem;
+}
+
+.checkout-success {
+  text-align: center;
+}
+
+.checkout-success p {
+  margin-bottom: 1.5rem;
+  color: var(--color-text-muted);
+}

@@ -44,5 +44,50 @@
     "stock": 45,
     "category": "Mode",
     "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=300&fit=crop"
+  },
+  {
+    "id": "5",
+    "name": "Tablette Pro X",
+    "description": "Tablette performante idéale pour le travail et le divertissement",
+    "price": 499.99,
+    "stock": 18,
+    "category": "Informatique",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop"
+  },
+  {
+    "id": "6",
+    "name": "Caméra de Surveillance HD",
+    "description": "Caméra intelligente avec vision nocturne et détection de mouvement",
+    "price": 89.99,
+    "stock": 35,
+    "category": "Sécurité",
+    "image": "https://images.unsplash.com/photo-1582139329536-e7284fece509?w=400&h=300&fit=crop"
+  },
+  {
+    "id": "7",
+    "name": "Clavier Mécanique RGB",
+    "description": "Clavier gaming rétroéclairé avec switches haute précision",
+    "price": 129.99,
+    "stock": 40,
+    "category": "Accessoires",
+    "image": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=400&h=300&fit=crop"
+  },
+  {
+    "id": "8",
+    "name": "Chaise Gaming Ergonomique",
+    "description": "Chaise confortable avec support lombaire réglable",
+    "price": 249.99,
+    "stock": 12,
+    "category": "Mobilier",
+    "image": "https://images.unsplash.com/photo-1598300056393-4aac492f4344?w=400&h=300&fit=crop"
+  },
+  {
+    "id": "9",
+    "name": "Disque SSD 1TB",
+    "description": "Stockage rapide et fiable pour booster vos performances",
+    "price": 109.99,
+    "stock": 28,
+    "category": "Informatique",
+    "image": "https://images.unsplash.com/photo-1591799265444-d66432b91588?w=400&h=300&fit=crop"
   }
 ]

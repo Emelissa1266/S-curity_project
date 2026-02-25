@@ -385,10 +385,11 @@ input, textarea {
   border-radius: 12px;
   border: 1px solid var(--color-border);
   padding: 2rem;
-  max-width: 480px;
+  max-width: 500px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .modal h2 {
@@ -409,6 +410,46 @@ input, textarea {
 
 .modal-actions .btn {
   flex: 1;
+}
+
+/* Formulaire de paiement dans le modal */
+.payment-amount {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-field label {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.form-field input,
+.form-field select {
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: #ffffff;
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px rgba(255, 71, 71, 0.2);
 }
 
 /* Orders */
@@ -754,6 +795,7 @@ input, textarea {
   border: 1px solid var(--color-border);
   padding: 0.75rem;
   font-size: 0.9rem;
+  cursor: pointer;
 }
 
 .flash-image-placeholder {

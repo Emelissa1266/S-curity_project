@@ -4,12 +4,16 @@ import crypto from 'crypto';
 import { readFileSync, writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import dotenv from 'dotenv';
+
+// Charger les variables d'environnement
+dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
@@ -219,7 +223,7 @@ app.post('/api/orders', (req, res) => {
   const orders = readJSON('orders.json');
   const products = readJSON('products.json');
   const clientUser = getAuthUser(req);
-  let { items, clientName, address, email } = req.body;
+  let { items, clientName, address, email, paymentMethod, paymentDetails } = req.body;
   if (clientUser?.type === 'client') {
     clientName = clientName || clientUser.nom;
     email = email || clientUser.email;
@@ -243,6 +247,9 @@ app.post('/api/orders', (req, res) => {
     clientName: clientName || 'Client',
     address: address || '',
     email: email || '',
+    paymentMethod: paymentMethod || 'card',
+    paymentDetails: paymentDetails || {},
+    paymentStatus: 'En attente',
     status: 'En attente',
     createdAt: new Date().toISOString()
   };

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useAuth } from '../context/AuthContext'
-const API_URL = import.meta.env.VITE_API_URL
+import { withApiBase } from '../api'
 
 export default function VendeurProducts() {
   const { authFetch } = useAuth()
@@ -9,12 +9,12 @@ export default function VendeurProducts() {
   const [modal, setModal] = useState({ open: false, product: null })
   const [form, setForm] = useState({ name: '', description: '', price: '', stock: '', category: '', image: '' })
 
-  useEffect(() => {
-     fetch(`${API_URL}/api/products`)
-       .then(res => res.json())
-       .then(data => { setProducts(data); setLoading(false) })
-       .catch(() => setLoading(false))
-   }, [])
+  const loadProducts = () => {
+    fetch(withApiBase('/api/products'))
+      .then(res => res.json())
+      .then(data => { setProducts(data); setLoading(false) })
+      .catch(() => setLoading(false))
+  }
 
   useEffect(() => {
     loadProducts()

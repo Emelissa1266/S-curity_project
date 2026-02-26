@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react'
+import { withApiBase } from '../api'
 
 const AuthContext = createContext()
 
@@ -15,7 +16,7 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     if (token && !user) {
-      fetch('/api/auth/me', {
+      fetch(withApiBase('/api/auth/me'), {
         headers: { Authorization: `Bearer ${token}` }
       })
         .then(r => r.ok ? r.json() : null)
@@ -32,7 +33,7 @@ export function AuthProvider({ children }) {
   }, [token])
 
   const login = async (email, password) => {
-    const res = await fetch('/api/auth/login', {
+    const res = await fetch(withApiBase('/api/auth/login'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })
@@ -47,7 +48,7 @@ export function AuthProvider({ children }) {
   }
 
   const signup = async (email, password, type, nom, localisation) => {
-    const res = await fetch('/api/auth/signup', {
+    const res = await fetch(withApiBase('/api/auth/signup'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password, type, nom, localisation })
@@ -63,7 +64,7 @@ export function AuthProvider({ children }) {
 
   const logout = () => {
     if (token) {
-      fetch('/api/auth/logout', { headers: { Authorization: `Bearer ${token}` } }).catch(() => {})
+      fetch(withApiBase('/api/auth/logout'), { headers: { Authorization: `Bearer ${token}` } }).catch(() => {})
     }
     setToken(null)
     setUser(null)
@@ -72,7 +73,7 @@ export function AuthProvider({ children }) {
   }
 
   const updateProfile = async (nom, localisation) => {
-    const res = await fetch('/api/auth/profile', {
+    const res = await fetch(withApiBase('/api/auth/profile'), {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -88,7 +89,7 @@ export function AuthProvider({ children }) {
   }
 
   const authFetch = (url, options = {}) => {
-    return fetch(url, {
+    return fetch(withApiBase(url), {
       ...options,
       headers: {
         ...options.headers,

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
+import { withApiBase } from '../api'
 
 export default function VendeurDashboard() {
   const { authFetch } = useAuth()
@@ -8,7 +9,7 @@ export default function VendeurDashboard() {
 
   useEffect(() => {
     Promise.all([
-      fetch('/api/products').then(r => r.json()),
+      fetch(withApiBase('/api/products')).then(r => r.json()),
       authFetch('/api/vendeur/orders').then(r => r.json())
     ]).then(([products, orders]) => {
       setStats({

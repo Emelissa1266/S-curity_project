@@ -7,7 +7,7 @@ export default function VendeurOrders() {
   const [loading, setLoading] = useState(true)
 
   const loadOrders = () => {
-    authFetch('${API_URL}/api/vendeur/orders')
+    authFetch('/api/vendeur/orders')
       .then(r => r.json())
       .then(data => { setOrders(data); setLoading(false) })
   }

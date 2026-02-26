@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useCart } from '../context/CartContext'
+import { withApiBase } from '../api'
 import './Products.css'
 
 export default function Products() {
@@ -8,7 +9,7 @@ export default function Products() {
   const { addToCart } = useCart()
 
   useEffect(() => {
-    fetch('/api/products')
+    fetch(withApiBase('/api/products'))
       .then(res => res.json())
       .then(data => { setProducts(data); setLoading(false) })
       .catch(() => setLoading(false))

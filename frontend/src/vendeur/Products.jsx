@@ -9,7 +9,7 @@ export default function VendeurProducts() {
   const [form, setForm] = useState({ name: '', description: '', price: '', stock: '', category: '', image: '' })
 
   const loadProducts = () => {
-    fetch('/api/products')
+    fetch('${API_URL}/api/products')
       .then(r => r.json())
       .then(data => { setProducts(data); setLoading(false) })
   }

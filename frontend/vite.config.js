@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
       port: 5173,
       proxy: {
         '/api': {
-          target: 'https://s-curity-project.onrender.com',
+          target: env.VITE_API_URL || 'https://s-curity-project.onrender.com',
           changeOrigin: true
         }
       }
